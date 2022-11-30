@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations.all {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+}
+
+dependencies {
+    testImplementation 'org.testng:testng:7.4.0'
+
+    implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation(
+            // Spring boot part
+            'org.springframework.boot:spring-boot-starter-data-jpa:2.6.6',
+            'org.springframework.boot:spring-boot-starter-validation:2.6.6',
+            'org.springframework.boot:spring-boot-starter-log4j2:2.7.5',
+
+            // Database part
+            'org.hibernate:hibernate-core:5.2.1',
+            'javax.persistence:javax.persistence-api:2.2',
+            'org.postgresql:postgresql:42.5.0',
+
+            // Common
+            'com.fasterxml.jackson.core:jackson-annotations:2.13.3',
+            'com.fasterxml.jackson.core:jackson-databind:2.13.3',
+    )
+
+}
+
+application {
+    mainClass = 'spring.multi.tenant.test.App'
+}
+
+tasks.named('test') {
+    useTestNG()
+}
