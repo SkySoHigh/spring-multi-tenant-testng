@@ -8,5 +8,5 @@ import java.util.List;
 @Repository
 public interface UsersRepository extends BasicRepository<UsersEntity, Integer> {
     // Testing adding custom methods to Repo
-    List<UsersEntity> deleteAllByLastName(String lastName);
+    List<UsersEntity> deleteAllByUsername(String username);
 }
