@@ -45,5 +45,7 @@ The TestNG framework will be used to write autotests.
 ## Run Test
 Run via cmd example:
 ```bash
+ gradle wrapper 
 ./gradlew test
+allure serve allure-results
 ```

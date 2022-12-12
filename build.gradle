@@ -49,3 +49,9 @@ test {
     dependsOn cleanTest
     systemProperties System.getProperties()
 }
+
+tasks.named("test") {
+    useTestNG()
+    dependsOn cleanTest
+    systemProperties System.getProperties()
+}
