@@ -11,8 +11,6 @@ configurations.all {
 }
 
 dependencies {
-    testImplementation 'org.testng:testng:7.4.0'
-
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
     implementation(
@@ -33,6 +31,14 @@ dependencies {
             'com.fasterxml.jackson.core:jackson-databind:2.13.3',
             'org.projectlombok:lombok:1.18.24'
     )
+
+    testImplementation(
+            'org.testng:testng:7.4.0',
+            'org.springframework.boot:spring-boot-starter-test:2.6.6'
+    )
+
+
+
 
 }
 
