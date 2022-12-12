@@ -26,9 +26,11 @@ public class UsersEntity {
     private String password;
 
     @Column(name = "info")
-    private String info;
+    @Builder.Default
+    private String info = "defaultInfo";
 
     @Column(name = "deleted")
-    private boolean deleted;
+    @Builder.Default
+    private boolean deleted = false;
 
 }
