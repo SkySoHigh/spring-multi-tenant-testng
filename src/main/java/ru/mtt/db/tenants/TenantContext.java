@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.db.tenants;
+package ru.mtt.db.tenants;
 
 
 /**

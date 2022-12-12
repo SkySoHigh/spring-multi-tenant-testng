@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.db.tenants;
+package ru.mtt.db.tenants;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.hibernate.MultiTenancyStrategy;
@@ -13,14 +13,13 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.SpringProperties;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
-import spring.multi.tenant.test.db.tenants.conf.DBConfiguration;
-import spring.multi.tenant.test.db.tenants.conf.DBConfigurationLoader;
+import ru.mtt.db.tenants.conf.DBConfiguration;
+import ru.mtt.db.tenants.conf.DBConfigurationLoader;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
@@ -33,11 +32,11 @@ import java.util.Map;
 
 @Configuration
 @EnableConfigurationProperties({JpaProperties.class})
-@EnableJpaRepositories(basePackages = {"spring.multi.tenant.test.db"},
+@EnableJpaRepositories(basePackages = {"ru.mtt"},
         transactionManagerRef = "TransactionManager",
         entityManagerFactoryRef = "EntityManagerFactory")
 public class MultiTenantJpaConfiguration {
-    private final String PACKAGE_SCAN = "spring.multi.tenant.test.db";
+    private final String PACKAGE_SCAN = "ru.mtt";
 
     @Autowired
     private JpaProperties jpaProperties;

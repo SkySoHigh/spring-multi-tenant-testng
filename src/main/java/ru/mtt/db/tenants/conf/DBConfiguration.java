@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.db.tenants.conf;
+package ru.mtt.db.tenants.conf;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.db.repository;
+package ru.mtt.db.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;

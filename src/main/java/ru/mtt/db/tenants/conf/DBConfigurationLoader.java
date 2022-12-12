@@ -1,9 +1,9 @@
-package spring.multi.tenant.test.db.tenants.conf;
+package ru.mtt.db.tenants.conf;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
-import spring.multi.tenant.test.core.loader.ResourceLoader;
+import ru.mtt.loader.ResourceLoader;
 
 import javax.validation.constraints.NotNull;
 import java.util.HashMap;

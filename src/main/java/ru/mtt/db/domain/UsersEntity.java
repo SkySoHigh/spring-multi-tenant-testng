@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.db.domain;
+package ru.mtt.db.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

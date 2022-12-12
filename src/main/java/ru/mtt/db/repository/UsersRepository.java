@@ -1,7 +1,7 @@
-package spring.multi.tenant.test.db.repository;
+package ru.mtt.db.repository;
 
 import org.springframework.stereotype.Repository;
-import spring.multi.tenant.test.db.domain.UsersEntity;
+import ru.mtt.db.domain.UsersEntity;
 
 import java.util.List;
 

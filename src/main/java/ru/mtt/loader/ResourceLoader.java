@@ -1,4 +1,4 @@
-package spring.multi.tenant.test.core.loader;
+package ru.mtt.loader;
 
 import javax.validation.constraints.NotNull;
 import java.io.FileNotFoundException;
