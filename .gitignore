@@ -8,3 +8,6 @@ build
 
 # Ignore idea dir
 .idea
+
+# tests
+allure-results
