@@ -9,8 +9,10 @@ public class CurrentTenantIdentifierResolverImpl implements CurrentTenantIdentif
 
     @Override
     public String resolveCurrentTenantIdentifier() {
-        String currentTenant = TenantContext.getCurrentTenant();
-        return currentTenant != null ? currentTenant : DEFAULT_TENANT;
+        if (TenantContext.getCurrentTenant() == null) {
+            TenantContext.setCurrentTenant(DEFAULT_TENANT);
+        }
+        return TenantContext.getCurrentTenant();
     }
 
     @Override
