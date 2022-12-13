@@ -2,17 +2,17 @@
 Checking the implementation of multi-tenant per database for automated testing tasks using TestNG
 
 ## Description
-### Disclaimer
-- For the most part, this is a concept check, so the tests themselves in this example will not check anything useful.
-- To simplify the verification of the concept, h2 in memory is used as a database
-
 ### For what purpose?
-To access multiple database shards or similar database schemas of different servers in test automation tasks.
-The TestNG framework will be used to write autotests.
+To access multiple database shards or similar database schemas of different servers in test automation tasks with support for dynamic addition of new data sources (zero code).
+
+### Disclaimer
+- For the most part, this is a concept check, so the tests themselves in this example will not check anything useful (test quality is sacrificed for the speed of proof-of-concept).
+- To simplify the verification of the concept, h2 in memory is used as a database.
 
 ## Requirements
 - Java 17
 - All specified deps in build.gradle
+- Allure (to serve reports)
 
 ## Configuration and Usage
 - Add tenants to tenants.json. One ot he tenants should be called **main**. **Main** tenant will be used as default datasource for all DB calls if there is no any tenant set in TenantContext
@@ -45,7 +45,7 @@ The TestNG framework will be used to write autotests.
 ## Run Test
 Run via cmd example:
 ```bash
- gradle wrapper 
+gradle wrapper 
 ./gradlew test
 allure serve allure-results
 ```
